@@ -32,6 +32,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("This is a login page");
+});
+
 app.use(cookieParser());
 app.use(express.json());
 app.use("/", authRoutes);
